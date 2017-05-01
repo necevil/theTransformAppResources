@@ -14,9 +14,11 @@ A Custom Fields Example
 ----
 We use the Custom field "Transformation Selected" (which has a Custom Field Id of: 20) to indicate the name of the Transformation the the user hasen chosen to Pursue.
 
-Let's assume the User selects "Weight Loss" for their Transformation.
+Let's assume the User selects "Weight Loss" for their Transformation, and our App then UPDATES their InfusionSoft Contact so that the "Transformation Selected" Custom Field has a value of "Weight Loss"
 
-We can use that information to send the user a Customized campaign of Emails that specifically targets the App functionality that would be useful to App Users who are looking to lose weight, while ommiting those features designed for App Users who are more inshape.
+We can use that information, and InfusionSoft's internal Logic, to send the user a Customized campaign of Emails that specifically targets the App functionality that would be useful to App Users who are looking to lose weight, while ommiting those features designed for App Users who are more inshape.
+
+This will result in a substantially higher percentage of total Users converting from Free Trial Users to Paid Subscribers.
 
 **Note:** *In the above Example we would also Apply the "App On-Boarding: Transformation Selected" Tag to Initiate the User into the Automated Email Campaign that would analyze the "Transformation Selected" Custom Field in order to send teh appropriate emails to the user.*
 

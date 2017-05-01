@@ -10,22 +10,28 @@ There are two main ways our Development team can interface with the Marketing / 
 1. Tags
 2. Custom Fields
 
-About Tags
+UPDATE or CREATE with API (First Contact with InfusionSoft)
 ====
-InfusionSoft "Tags" (Previously referred to as "Groups" by the Legacy XMLrpc API) are used to trigger Automation, which allows us to start or stop Campaigns for a Given user.
+As soon as an App User enter's their Email Address during account creation / On-Boarding, we need to Apply our first Tag.  
 
-See our Tags Documentation: 
-https://github.com/necevil/theTransformAppResources/tree/master/Tags-Groups
+Before we can Appy a Tag we need to make sure the User's InfusionSoft Contact Exists (retrieve the Contact Id) and then UPDATE the user's Install DATE (Must be the first day of Trial) as all other InfusionSoft functions rely on this information.
 
-Tags should be applied in Real Time AS OFTEN AS POSSIBLE.
+**App Install Date** is a Custom Field and must be a DATE type object.
 
-This is beacuse the email marketing that is triggered by our Tags follows the user very closely (particularly during On-Boarding).  
+To check to see if a User exists in InfusionSoft based on Email use the following Method:
+>ContactService.findByEmail: client.findByEmail(email, fMap, callback)
 
-If we do not apply Tags in Real Time, or close to Real Time as possible, users may frequently receive emails that are not relevent to them, which will Usually result in them Blocking future emails, or worse yet, reporting a Complaint to Gmail or their ISP (which results in fewer of our emails being seen by ALL users).
+If the user exists the response will contain the User's Contact Id.  If the user exists we can then use the following to update the Contact.
+>ContactService.update: client.updateCon(contactId, contactData, callback)
 
-List of Available / Active Tags: 
+If the User is not found by Email in InfusionSoft we should use the following to create the user (with Duplicate check... JUST IN CASE):
+>ContactService.addWithDupCheck: client.addWithDupCheck(data, dupCheckType, callback)
 
->https://github.com/necevil/theTransformAppResources/blob/master/Tags-Groups/AvailableTags.md
+Critical Information to add to InfusionSoft Contacts
+=====
+
+
+
 
 Custom Fields
 ======
@@ -43,6 +49,23 @@ User Birthday
 User Address
 
 Available Custom Fields can be found here: {coming soon}
+
+About Tags
+====
+InfusionSoft "Tags" (Previously referred to as "Groups" by the Legacy XMLrpc API) are used to trigger Automation, which allows us to start or stop Campaigns for a Given user.
+
+See our Tags Documentation: 
+https://github.com/necevil/theTransformAppResources/tree/master/Tags-Groups
+
+Tags should be applied in Real Time AS OFTEN AS POSSIBLE.
+
+This is beacuse the email marketing that is triggered by our Tags follows the user very closely (particularly during On-Boarding).  
+
+If we do not apply Tags in Real Time, or close to Real Time as possible, users may frequently receive emails that are not relevent to them, which will Usually result in them Blocking future emails, or worse yet, reporting a Complaint to Gmail or their ISP (which results in fewer of our emails being seen by ALL users).
+
+List of Available / Active Tags: 
+
+>https://github.com/necevil/theTransformAppResources/blob/master/Tags-Groups/AvailableTags.md
 
 More Information on Tags vs Custom Fields
 ====

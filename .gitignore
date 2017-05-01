@@ -1,0 +1,53 @@
+#May need to Remove ignore policy from node_modules in order to track the separate repo enclosed there.
+#node_modules
+
+app/bower_components
+/dist*
+.tmp
+.sass-cache
+.idea
+*.iml
+*.map
+
+#Ignore Stuff that Pops up
+npm-debug.log
+#.babelrc
+#.editorconfig
+
+#Ignore Webpack /dist/ assets so we don't accidentally include them
+apps/**/dist*
+apps/**/*docker*
+
+# Ghost
+*.db
+
+# Docker
+docker/ghost/dist
+
+# From: https://raw.githubusercontent.com/github/gitignore/master/Global/OSX.gitignore
+*.DS_Store
+.AppleDouble
+.LSOverride
+
+# Icon must end with two \r
+Icon
+
+
+# Thumbnails
+._*
+
+# Files that might appear in the root of a volume
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+# Directories potentially created on remote AFP share
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk

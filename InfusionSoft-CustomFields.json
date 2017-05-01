@@ -1,0 +1,194 @@
+[
+  {
+    "id": 2,
+    "label": "About",
+    "options": [],
+    "field_type": "TextArea"
+  },
+  {
+    "id": 4,
+    "label": "utm_source",
+    "options": [],
+    "field_type": "Text"
+  },
+  {
+    "id": 6,
+    "label": "utm_medium",
+    "options": [],
+    "field_type": "Text"
+  },
+  {
+    "id": 8,
+    "label": "utm_campaign",
+    "options": [],
+    "field_type": "Text"
+  },
+  {
+    "id": 10,
+    "label": "utm_term",
+    "options": [],
+    "field_type": "Text"
+  },
+  {
+    "id": 12,
+    "label": "utm_content",
+    "options": [],
+    "field_type": "Text"
+  },
+  {
+    "id": 14,
+    "label": "DeviceType",
+    "options": [],
+    "field_type": "Text"
+  },
+  {
+    "id": 16,
+    "label": "Email Confirmation Status",
+    "options": [],
+    "field_type": "Text"
+  },
+  {
+    "id": 18,
+    "label": "App Download Date",
+    "options": [],
+    "field_type": "Date"
+  },
+  {
+    "id": 20,
+    "label": "Transformation Selected",
+    "options": [],
+    "field_type": "Text"
+  },
+  {
+    "id": 24,
+    "label": "Program Selected",
+    "options": [],
+    "field_type": "Text"
+  },
+  {
+    "id": 26,
+    "label": "Subscription Chosen",
+    "options": [],
+    "field_type": "Text"
+  },
+  {
+    "id": 30,
+    "label": "Subscription Status",
+    "options": [],
+    "field_type": "Text"
+  },
+  {
+    "id": 32,
+    "label": "Height",
+    "options": [],
+    "field_type": "Text"
+  },
+  {
+    "id": 34,
+    "label": "Gender",
+    "options": [],
+    "field_type": "Text"
+  },
+  {
+    "id": 40,
+    "label": "Location",
+    "options": [],
+    "field_type": "Text"
+  },
+  {
+    "id": 44,
+    "label": "Email Verification Date",
+    "options": [],
+    "field_type": "Date"
+  },
+  {
+    "id": 46,
+    "label": "Age",
+    "options": [],
+    "field_type": "WholeNumber"
+  },
+  {
+    "id": 48,
+    "label": "Subscription Start Date",
+    "options": [],
+    "field_type": "Date"
+  },
+  {
+    "id": 50,
+    "label": "Subscription Expiration Date",
+    "options": [],
+    "field_type": "Date"
+  },
+  {
+    "id": 54,
+    "label": "Starting Weight",
+    "options": [],
+    "field_type": "DecimalNumber"
+  },
+  {
+    "id": 56,
+    "label": "Current Weight",
+    "options": [],
+    "field_type": "DecimalNumber"
+  },
+  {
+    "id": 58,
+    "label": "Change in Weight",
+    "options": [],
+    "field_type": "Percent"
+  },
+  {
+    "id": 60,
+    "label": "Starting Measurements",
+    "options": [],
+    "field_type": "DecimalNumber"
+  },
+  {
+    "id": 62,
+    "label": "Current Measurements",
+    "options": [],
+    "field_type": "DecimalNumber"
+  },
+  {
+    "id": 64,
+    "label": "Change in Measurements",
+    "options": [],
+    "field_type": "Percent"
+  },
+  {
+    "id": 66,
+    "label": "Total Workouts Completed",
+    "options": [],
+    "field_type": "WholeNumber"
+  },
+  {
+    "id": 68,
+    "label": "Workout Streak Current (Days)",
+    "options": [],
+    "field_type": "WholeNumber"
+  },
+  {
+    "id": 70,
+    "label": "Workout Streak Best (Days)",
+    "options": [],
+    "field_type": "WholeNumber"
+  },
+  {
+    "id": 72,
+    "label": "BMI Starting",
+    "options": [],
+    "field_type": "DecimalNumber"
+  },
+  {
+    "id": 74,
+    "label": "BMI Current",
+    "options": [],
+    "field_type": "DecimalNumber"
+  },
+  {
+    "id": 76,
+    "label": "Last Workout Completed",
+    "options": [],
+    "field_type": "Date"
+  }
+]

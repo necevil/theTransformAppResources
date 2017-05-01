@@ -21,7 +21,11 @@ Tags should be applied in Real Time AS OFTEN AS POSSIBLE.
 
 This is beacuse the email marketing that is triggered by our Tags follows the user very closely (particularly during On-Boarding).  
 
-If we do not apply Tags in Real Time, or close to Real Time as possible, users may frequently receive emails that are not relevent to them, which will Usually result in them Blocking future emails, or worse yet, reporting a Complaint to Gmail or their ISP (which results in fewer of our emails being seen by ALL users)
+If we do not apply Tags in Real Time, or close to Real Time as possible, users may frequently receive emails that are not relevent to them, which will Usually result in them Blocking future emails, or worse yet, reporting a Complaint to Gmail or their ISP (which results in fewer of our emails being seen by ALL users).
+
+List of Available / Active Tags: 
+
+>https://github.com/necevil/theTransformAppResources/blob/master/Tags-Groups/AvailableTags.md
 
 Custom Fields
 ======

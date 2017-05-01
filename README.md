@@ -27,7 +27,7 @@ Custom Fields
 ======
 Custom Fields DO NOT trigger changes in a User's Campaign and only secondarily influence which emails are received.
 
-Custom Fields can be updated either in Real Time, or at a later time, via a script.  Obviously Real Time is better, but in some cases we may want to conserve resources for Custom Fields that are not as relevent.
+Custom Fields can be updated either in Real Time, or at a later time, via a script.  Real Time is better when possible, but in some cases we may want to conserve resources for Custom Fields that are not as relevent.
 
 One Custom Field that should be updated in Real Time:
 ------
@@ -39,4 +39,10 @@ User Birthday
 User Address
 
 Available Custom Fields can be found here: {coming soon}
+
+More Information on Tags vs Custom Fields
+====
+InfusionSoft provides a good article that describes when to use Tags vs when to use Custom Fields, you can read that here: 
+
+>http://help.infusionsoft.com/userguides/get-started/create-custom-fields/custom-fields-vs-tags
 

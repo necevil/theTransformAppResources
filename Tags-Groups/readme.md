@@ -26,6 +26,8 @@ Finding a User's Contact Id / Adding a Contact
 ======
 In order to Tag a user we must first have their Contact Id number.  Since we *MAY* or *MAY NOT* be creating a new user in InfusionSoft we need to use the following UPDATE or CREATE REST Api methodolgy: 
 
+>https://developer.infusionsoft.com/docs/rest/#!/Contact/createOrUpdateContactUsingPUT
+
 For Legacy this corresponds to the following:
 
 >***ContactService.addWithDupCheck***: client.addWithDupCheck(data, dupCheckType, callback)
@@ -100,6 +102,8 @@ Last Name: WelcomeTest
 You may use the API to Query based on the Contact Id to find out whether your code is applying a given tag correctly, in this way you may test your code to be sure Tags are applied.
 
 You can also use the REST Api to check for a User's Contact / Tags if you do not want to write custom code to do that using the NPM Package / Legacy API: 
+
+>https://developer.infusionsoft.com/docs/rest/#!/Contact/listAppliedTagsUsingGET
 
 The REST API Documentation site allows a Developer to login (via the Authorize link in the Top Left) to actually test REST API requests FROM the documentation site (requiring no custom code to be written): 
 

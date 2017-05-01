@@ -32,6 +32,7 @@ Critical Information to add to InfusionSoft Contacts
 =====
 In addition to **App Download Date** (Custom Field) we also need to add the following to the InfusionSoft Contact:
 
+EMAIL
 First Name
 Last Name
 Address (If Available)
@@ -50,6 +51,8 @@ https://github.com/necevil/theTransformAppResources/blob/master/CustomFields/Inf
 
 The MOST Important Custom Field is:
 **App Download Date** (Custom Field id: 18)
+
+Equally important, we need to make sure ALL Users have their Email added to the Contact when we create it via the API.
 
 In general an App User should be updated with Available Custom Fields as soon as that Information becomes available to the Back-end System /DynamoDB.  In otherwords, if we are storing information about a user in DyanmoDB, there is a rasonable chance we should also be Updating InfusionSoft Custom Fields and Adding InfusionSoft Tags.
 

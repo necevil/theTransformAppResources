@@ -18,8 +18,12 @@ Let's assume the User selects "Weight Loss" for their Transformation, and our Ap
 
 We can use that information, and InfusionSoft's internal Logic, to send the user a Customized campaign of Emails that specifically targets the App functionality that would be useful to App Users who are looking to lose weight, while ommiting those features designed for App Users who are more inshape.
 
-This will result in a substantially higher percentage of total Users converting from Free Trial Users to Paid Subscribers.
-
 **Note:** *In the above Example we would also Apply the "App On-Boarding: Transformation Selected" Tag to Initiate the User into the Automated Email Campaign that would analyze the "Transformation Selected" Custom Field in order to send teh appropriate emails to the user.*
 
-Where Tags provide the methodology used to Initiate the Campaign, Custom Fields provide the information that we use to customize the Campaign Message.
+Improved Conversion Rating / User Rention
+----
+Custom Fields allow us to customize our message to each user's experience specifically.  This (over time) will result in a substantially higher percentage of total Users converting from Free Trial Users to Paid Subscribers.
+
+Custom Field Conclusion
+====
+Where Applying "Tags" provides a method to Start / Initiate a Campaign for a Specific User, Custom Fields provide the information that we use to customize the Campaign Message to be sure it is relevent to each user.

@@ -32,13 +32,13 @@ Critical Information to add to InfusionSoft Contacts
 =====
 In addition to **App Download Date** (Custom Field) we also need to add the following to the InfusionSoft Contact:
 
-EMAIL
-First Name
-Last Name
-Address (If Available)
-Phone (If Available)
+1. ***EMAIL***
+2. First Name
+3. Last Name
+4. Address (If Available)
+5. Phone (If Available)
 
-The most important information is the First Name, Last Name and **App Download Date**
+The most important information is Email, First Name, Last Name and **App Download Date**
 
 
 Custom Fields

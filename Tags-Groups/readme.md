@@ -68,7 +68,8 @@ The above list will contain entries that look something like this:
 Users who have opened the app but have not yet verified their email or completed their registration.
 
 ***Verified Email / Created Account*** ID=180
-Users who have verified their Email but have yet to select / choose a transformation. User should be tagged the first time they open the app after Verifying their email.
+
+Description: Users who have verified their Email but have yet to select / choose a transformation. User should be tagged the first time they open the app after Verifying their email.
 
 In the above examples we describe the User's and WHEN that user would no longer be a part of the Tag.  It is up to the Developers to appropriately determine the time at which the Tag is applied.
 

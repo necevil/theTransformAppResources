@@ -13,9 +13,9 @@ For this reason it makes sense to apply Tags from written functions / methods th
 
 For the NPM InfusionSoft package (found here: https://www.npmjs.com/package/infusionsoft) "Tags" are described using the Legacy "Group" methods:
 
-***ContactService.addToGroup***: client.grpAssign(contactId, groupId, callback)
+>***ContactService.addToGroup***: client.grpAssign(contactId, groupId, callback)
 
-***ContactService.removeFromGroup***: client.grpRemove(contactId, groupId, callback)
+>***ContactService.removeFromGroup***: client.grpRemove(contactId, groupId, callback)
 
 ***In order to apply a Tag***
 You must have two critical pieces of information:
@@ -27,15 +27,19 @@ Finding a User's Contact Id / Adding a Contact
 In order to Tag a user we must first have their Contact Id number.  Since we *MAY* or *MAY NOT* be creating a new user in InfusionSoft we need to use the following UPDATE or CREATE REST Api methodolgy: 
 
 For Legacy this corresponds to the following:
-***ContactService.addWithDupCheck***: client.addWithDupCheck(data, dupCheckType, callback)
+
+>***ContactService.addWithDupCheck***: client.addWithDupCheck(data, dupCheckType, callback)
 
 We need to make sure we check for Duplicates since the User may already have a Contact / Contact Id if they signed up for the Mailing List previously.
 
 Another useful Legacy API method would be:
-***ContactService.findByEmail***: client.findByEmail(email, fMap, callback)
+
+>***ContactService.findByEmail***: client.findByEmail(email, fMap, callback)
 
 With the above we can supply the current users Email and then return their information (which should include their Contact Id).
 
+InfusionSoft API Contact Id Queries 
+------
 One thing that we want to avoid is having to Query InfusionSoft API often to retrieve a Contact Id number.  We can do this by performing a single Query to InfusionSoft when we do an Update or Create, or alternately by saving the Response that comes back when a user is created into DynamoDB.
 
 Either way, we need to save the InfusionSoft Contact Id for EVERY app user to that user's DyanmoDB model instance.  We also need to have this available locally on the device so that we can quickly execute addToGroup method calls without needing to first send another query to InfusionSoft API to retrieve the Contact Id (not necessary since we will have it saved).
@@ -45,13 +49,17 @@ Finding the Appropriate Tag Id
 =====
 Once of the Key Reasons we created this Documentation Repository was so that we had an easy place to access a more detailed list of Tag Id's and descriptions than would be available in InfusionSoft by Default.
 
-See list of Available Tags: {Added soon}
+See list of Available Tags: 
+
+>https://github.com/necevil/theTransformAppResources/blob/master/Tags-Groups/AvailableTags.md
 
 As of this writing there is no API method available to retrieve a list of Tag Id's (Legacy API refers to "Tags" as "Groups").
 
 For this reason we have created a separate Markdown formatted list of Available Tags which includes detailed descriptions of their intended use in addition to descriptions of WHEN that Tag should be applied.
 
-See list of Available Tags: {Added soon}
+See list of Available Tags: 
+
+https://github.com/necevil/theTransformAppResources/blob/master/Tags-Groups/AvailableTags.md
 
 The above list will contain entries that look something like this:
 ***Opened App*** ID=178
@@ -62,7 +70,9 @@ Users who have verified their Email but have yet to select / choose a transforma
 
 In the above examples we describe the User's and WHEN that user would no longer be a part of the Tag.  It is up to the Developers to appropriately determine the time at which the Tag is applied.
 
-For instance, with "Opened App":
+Example Instance
+---- 
+When looking at the "Opened App" Tag:
 Since "Opened App" only includes users UNTIL they have verified their Email address, a good time to apply this Tag would be when the Verification Email is being sent.
 
 We would then Apply the "Verified Email" tag as soon as the user successfully verifies their email address.
@@ -91,7 +101,9 @@ You may use the API to Query based on the Contact Id to find out whether your co
 
 You can also use the REST Api to check for a User's Contact / Tags if you do not want to write custom code to do that using the NPM Package / Legacy API: 
 
-The REST API Documentation site allows a Developer to login (via the Authorize link in the Top Left) to actually test REST API requests FROM the documentation site (requiring no custom code to be written): https://developer.infusionsoft.com/docs/rest/#!/Contact/listAppliedTagsUsingGET
+The REST API Documentation site allows a Developer to login (via the Authorize link in the Top Left) to actually test REST API requests FROM the documentation site (requiring no custom code to be written): 
+
+>https://developer.infusionsoft.com/docs/rest/#!/Contact/listAppliedTagsUsingGET
 
 The REST API endpoint mentioned above will return all Tags applied to a user which is useful in testing to see if your code correctly applied a Tag to an InfusionSoft Contact as expected.
 

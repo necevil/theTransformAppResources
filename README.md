@@ -16,9 +16,10 @@ As soon as an App User enter's their Email Address during account creation / On-
 
 Before we can Appy a Tag we need to make sure the User's InfusionSoft Contact Exists (retrieve the Contact Id) and then UPDATE the user's Install DATE (Must be the first day of Trial) as all other InfusionSoft functions rely on this information.
 
-**App Install Date** is a Custom Field and must be a DATE type object.
+**App Download Date** (Custom Field id: 18)
+Is a Custom Field and must be a DATE type object that represents the Day the User installed the App and Began their Free Trial.  
 
-To check to see if a User exists in InfusionSoft based on Email use the following Method:
+To check to see if a User exists in InfusionSoft based on Email they entered during Account Creation (should be the same address their Verification email is sent to).  Use the following Method:
 >ContactService.findByEmail: client.findByEmail(email, fMap, callback)
 
 If the user exists the response will contain the User's Contact Id.  If the user exists we can then use the following to update the Contact.
@@ -29,12 +30,30 @@ If the User is not found by Email in InfusionSoft we should use the following to
 
 Critical Information to add to InfusionSoft Contacts
 =====
+In addition to **App Download Date** (Custom Field) we also need to add the following to the InfusionSoft Contact:
 
+First Name
+Last Name
+Address (If Available)
+Phone (If Available)
 
+The most important information is the First Name, Last Name and **App Download Date**
 
 
 Custom Fields
 ======
+Full Docs on Custom Fields can be found here:
+https://github.com/necevil/theTransformAppResources/tree/master/CustomFields
+
+Available Custom Fields that we want to Use for App Tracking can be found here:
+https://github.com/necevil/theTransformAppResources/blob/master/CustomFields/InfusionSoft-CustomFields.json
+
+The MOST Important Custom Field is:
+**App Download Date** (Custom Field id: 18)
+
+In general an App User should be updated with Available Custom Fields as soon as that Information becomes available to the Back-end System /DynamoDB.  In otherwords, if we are storing information about a user in DyanmoDB, there is a rasonable chance we should also be Updating InfusionSoft Custom Fields and Adding InfusionSoft Tags.
+
+**About Custom Fields**
 Custom Fields DO NOT trigger changes in a User's Campaign and only secondarily influence which emails are received.
 
 Custom Fields can be updated either in Real Time, or at a later time, via a script.  Real Time is better when possible, but in some cases we may want to conserve resources for Custom Fields that are not as relevent.
@@ -48,7 +67,7 @@ Some Custom Field that can be Updated by Script:
 User Birthday
 User Address
 
-Available Custom Fields can be found here: {coming soon}
+Available Custom Fields can be found here: https://github.com/necevil/theTransformAppResources/blob/master/CustomFields/InfusionSoft-CustomFields.json
 
 About Tags
 ====

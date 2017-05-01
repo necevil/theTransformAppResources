@@ -8,9 +8,9 @@ A list of availabel custom fields can be retrieved from the current InfusionSoft
 
 Since not all developers will have easy access to the REST Api we also keep a secondary list of Available Custom Fields in Git, here: 
 
->{coming soon}
+>https://github.com/necevil/theTransformAppResources/blob/master/CustomFields/InfusionSoft-CustomFields.json
 
-An Example
+A Custom Fields Example
 ----
 We use the Custom field "Transformation Selected" (which has a Custom Field Id of: 20) to indicate the name of the Transformation the the user hasen chosen to Pursue.
 

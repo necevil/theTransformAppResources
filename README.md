@@ -3,6 +3,40 @@ This repository is created as an intermediary source of information that bridges
 
 The goal of this resource is to provide quick access to the tools and decisions we have made in regards to connecting with, updating, and managing the interface between our Ionic App, our DynamoDB backen and our InfusionSoft account (found here: https://ti328.infusionsoft.com/app/nav/link?navSystem=nav.mynav&navModule=nav.home.dashboard)
 
+InfusionSoft API Quotas and Limitations
+====
+The most important thing to note about InfusionSoft is that they enforce several HARD Quotas, as follows.
+
+Both Api options start with the same possible Quota HOWEVER, the REST Api Quotas CAN be increased (not yet sure of the cost) by special request and on an as needed basis per InfusionSoft customer.  The Legacy API CANNOT be increased.
+
+Legacy Api Quotas (for XMLRPC requests)
+---
+Legacy API is used by the following NPM Package (which we previously believed we could use safely): https://www.npmjs.com/package/infusionsoft
+
+Quota is as follows:
+1. Maximum of 25 requests Per Second
+2. Maximum of 125,000 requests Per Day
+3. Maximum of 3,750,000 requests Per Month
+
+The requests per second will be a major problem for us during CRON Script development since we have ~60,000 contacts to update or create, each one of those will need at least two API Requests to update the information via Legacy API.
+
+60,000 x 2 = 120,000 requests (very near to per day Limit), more importantly we would have to find a way to rate-limit ourselves in terms of the 25 per-second Quota.  This would mean we need some sort of a Caching solution like Redis with Resque (see resque documentation: https://github.com/taskrabbit/node-resque)
+
+***MOST IMPORTANT: No Increase possible for Legacy API Quota***
+
+
+REST Api Quotas
+----
+Quota is as follows:
+1. Maximum of 25 requests Per Second
+2. Maximum of 125,000 requests Per Day
+3. Maximum of 3,750,000 requests Per Month
+
+Both Api options start with the same possible Quota.  REST Api Quotas CAN be increased (not yet sure of the cost) by special request and on an as needed basis per InfusionSoft customer.
+
+This means that in all likely hood will will need to use the REST Api, and can not count on using the previously configured NPM Package as a reliable way to update our date.
+
+
 Crossing over to InfusionSoft
 =====
 There are two main ways our Development team can interface with the Marketing / CRM InfusionSoft system.

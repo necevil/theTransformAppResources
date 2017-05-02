@@ -24,6 +24,7 @@ The requests per second will be a major problem for us during CRON Script develo
 
 ***MOST IMPORTANT: No Increase possible for Legacy API Quota***
 
+In order to get around this issue we may be able to use the following Limiter Package (very popular on NPM): https://www.npmjs.com/package/limiter
 
 REST Api Quotas
 ----
@@ -34,7 +35,7 @@ Quota is as follows:
 
 Both Api options start with the same possible Quota.  REST Api Quotas CAN be increased (not yet sure of the cost) by special request and on an as needed basis per InfusionSoft customer.
 
-This means that in all likely hood will will need to use the REST Api, and can not count on using the previously configured NPM Package as a reliable way to update our date.
+This means that in all likely hood will will need to use the REST Api, and can not count on using the previously configured NPM Package as a reliable way to update our data.
 
 
 Crossing over to InfusionSoft

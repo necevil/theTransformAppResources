@@ -44,6 +44,10 @@ We would like to create 3 scripts to work with through the functionality we need
 
 Cron Script 1 "Add Contacts"
 ======
+This script generally applies to any User who has not yet been added to InfusionSoft.  We can tell the difference since we plan to Save the User's InfusionSoft Contact Id into their DynamoDB / Cognito user profile.  
+
+Therefore this script will opperate on ONLY Users who DO NOT have a InfusionSoft Contact Id already set in DynamoDB.
+
 1. API Call 1 - Query User's email to make sure they don't already exist in InfusionSoft (Users who have previously signed up for Email mailing list WILL EXIST)
 2. API Call 2 - Add New User Contact to InfusionSoft (with email AND App Download Date) or Update User's Contact with Available information / custom fields if they exist.
 3. Store User's InfusionSoft Contact Id with the User's Cognito identity in DynamoDB 

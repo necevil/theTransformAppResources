@@ -3,6 +3,10 @@ This repository is created as an intermediary source of information that bridges
 
 The goal of this resource is to provide quick access to the tools and decisions we have made in regards to connecting with, updating, and managing the interface between our Ionic App, our DynamoDB backen and our InfusionSoft account (found here: https://ti328.infusionsoft.com/app/nav/link?navSystem=nav.mynav&navModule=nav.home.dashboard)
 
+Links to More Detailed Documentation:
+1. InfusionSoft Custom Fields: https://github.com/necevil/theTransformAppResources/tree/master/InfusionSoft/CustomFields
+2. InfusionSoft Tags: https://github.com/necevil/theTransformAppResources/tree/master/InfusionSoft/Tags-Groups
+
 InfusionSoft API Quotas and Limitations
 ====
 The most important thing to note about InfusionSoft is that they enforce several HARD Quotas, as follows.
